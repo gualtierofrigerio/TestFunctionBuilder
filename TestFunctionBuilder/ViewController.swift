@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let view1 = SimpleView(withBackgroundColor: .yellow)
         let view2 = SimpleView(withBackgroundColor: .red)
         let frame = self.view.frame
@@ -20,6 +19,10 @@ class ViewController: UIViewController {
             view1
             view2
             SimpleView(withBackgroundColor: .blue)
+            ContainerView(frame:frame, align:.horizontal) {
+                SimpleView(withBackgroundColor: .orange)
+                SimpleView(withBackgroundColor: .green)
+            }
         }
         self.view.addSubview(containerView.view)
     }

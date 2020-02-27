@@ -15,7 +15,7 @@ protocol UIKitView {
 
 @_functionBuilder
 struct UIViewBuilder {
-    static func buildBlock(_ items:UIKitView...) -> [UIView] {
-        items.map{$0.view}
+    static func buildBlock(_ views:UIKitView...) -> [UIView] {
+        views.map{$0.view}
     }
 }
