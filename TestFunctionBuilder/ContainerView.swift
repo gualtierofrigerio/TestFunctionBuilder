@@ -23,6 +23,13 @@ struct ContainerView:UIKitView {
         addViews(views, align: align, size: frame.size)
     }
     
+    init(frame:CGRect, @UIKitViewBuilder _ builder:()->UIKitView) {
+        let uikitView = builder()
+        containerView = UIView(frame:frame)
+        let views = uikitView.views
+        addViews(views, align: .horizontal, size:frame.size)
+    }
+    
     // MARK: - Private
     private var containerView:UIView
     
