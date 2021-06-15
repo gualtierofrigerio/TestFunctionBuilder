@@ -67,4 +67,9 @@ struct UIKitViewBuilder {
     static func buildIf(_ view:UIKitView?) -> UIKitView {
         view ?? EmptyView()
     }
+    
+    // buildIf has been replaced by buildOptional
+    static func buildOptional(_ component: UIKitView?) -> UIKitView {
+        component ?? EmptyView()
+    }
 }
