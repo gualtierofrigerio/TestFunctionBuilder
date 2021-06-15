@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct EmptyView:UIKitView {
+    var view: UIView {
+        UIView()
+    }
+}
+
 struct SimpleView:UIKitView {
     var view:UIView {
         internalView ?? UIView()
